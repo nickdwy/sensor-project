@@ -1,2 +1,2 @@
-hello
-heq
+console.log("hello there!");
+
