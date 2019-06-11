@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<title>温湿度和LED面板</title>
+	</head>
+
+	<body>
+		<header class="card-header text-center">
+			<h1>充电车可视化界面</h1>
+		</header>
+		<div class="container">
+			<div class="row">
+				<!-- 显示电池电量 -->
+				<div class="col-md">
+					<div class="card text-center text-white bg-info" style="margin-top: 15px;">
+						<div class="card-header">
+							充电节点剩余电量
+						</div>
+						<div class="card-body">
+							<h5 id="electric" class="card-title text-center">显示剩余电量...</h5>
+						</div>
+						<div class="card-footer text-white">
+							%
+						</div>
+					</div>
+				</div>
+		
+				<!-- 显示小车剩余电量 -->
+				<div class="col-md">
+					<div class="card text-center text-white bg-info" style="margin-top: 15px;">
+						<div class="card-header">
+							小车本身电量
+						</div>
+						<div class="card-body">
+							<h5 id="car" class="card-title text-center">显示剩余电量...</h5>
+						</div>
+						<div class="card-footer text-white">
+							%
+						</div>
+					</div>
+				</div>
+		
+				<!-- 小车位置 -->
+				<div class="col-md">
+					<div class="card text-center text-white bg-info" style="margin-top: 15px;">
+						<div class="card-header">
+							小车位置
+						</div>
+						<div class="card-body">
+							<h5 id="position" class="card-title text-center">显示当前位置...</h5>
+						</div>
+						<div class="card-footer text-white">
+							(x, y) cm
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md">
+					<div class="card text-center text-white bg-info" style="margin-top: 15px;">
+						<div class="card-header">
+							温度
+						</div>
+						<div class="card-body">
+							<h5 id="temperature" class="card-title text-center">加载温度...</h5>
+						</div>
+						<div class="card-footer text-white">
+							℃
+						</div>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="card text-center text-white bg-success" style="margin-top: 15px;">
+						<div class="card-header">
+							湿度
+						</div>
+						<div class="card-body">
+							<h5 id="humidity" class="card-title text-center">加载湿度...</h5>
+						</div>
+						<div class="card-footer text-white">
+							%
+						</div>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="card text-center text-white bg-info" style="margin-top: 15px;">
+						<div class="card-header">
+							充电节点个数
+						</div>
+						<div class="card-body">
+							<h5 id="count" class="card-title text-center">显示个数...</h5>
+						</div>
+						<div class="card-footer text-white">
+							个
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card text-center text-white bg-info" style="margin-top: 15px;">
+						<div class="card-header">
+							温度图表
+						</div>
+						<div class="card-body">
+							<canvas id="temperature_chart" width="100%" height="60px" class="card-title text-center">温度图表</canvas>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="card text-center text-white bg-success" style="margin-top: 15px;">
+						<div class="card-header">
+							湿度图表
+						</div>
+						<div class="card-body">
+							<canvas id="humidity_chart" width="100%" height="60px" class="card-title text-center">湿度图表</canvas>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card text-center text-white" style="margin-top: 15px;background: yellow;">
+						<div class="card-header" style="color: #000;">
+							物联网1151邓文渊
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+		<!--  JavaScript -->
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.js"></script>
+		<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="script.js"></script>
+	</body>
+
+</html>

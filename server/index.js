@@ -1,10 +1,12 @@
 const express = require("express");
 const app = express();
-app.get("/temperature",(req,res) => {
-    res.send("24'C");
+const path=require("path");
+app.use("/",express.static(path.join(__dirname,"public")));
+app.get("/temperture",(req,res) => {
+    res.send("24");
 });
 app.get("/humidity",(req,res) => {
-    res.send("48%");
+    res.send("70");
 });
 app.listen(3000,() => {
     console.log("Server listening on port 3000");
